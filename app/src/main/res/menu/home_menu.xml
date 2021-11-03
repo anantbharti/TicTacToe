@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/single_scores"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="Single scoreboard">
+    </item>
+    <item
+        android:id="@+id/duo_scores"
+        android:orderInCategory="200"
+        app:showAsAction="never"
+        android:title="Duo scoreboard">
+    </item>
+    <item
+        android:id="@+id/reset_scores"
+        android:orderInCategory="300"
+        app:showAsAction="never"
+        android:title="Reset all scores">
+    </item>
+    <item
+        android:id="@+id/help"
+        android:orderInCategory="400"
+        app:showAsAction="never"
+        android:title="Help!">
+    </item>
+
+</menu>

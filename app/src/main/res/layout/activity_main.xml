@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rootRL"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@mipmap/night_sky"
+        tools:ignore="MissingConstraints">
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/sadness"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/single_icon"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Single"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:id="@+id/single_text"
+        android:textStyle="bold"
+        android:layout_below="@id/single_icon"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:src="@mipmap/parents"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/duo_icon"
+        android:layout_below="@id/single_text"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duo"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:id="@+id/duo_text"
+        android:textStyle="bold"
+        android:layout_below="@id/duo_icon"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="30dp"
+        android:id="@+id/single_ll"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:inputType="text"
+            android:background="#DCDCDC"
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:id="@+id/single_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#E1E1E1"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:text="You may skip"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Start"
+            android:id="@+id/start_single"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/duo_ll"
+        android:layout_marginHorizontal="30dp"
+        android:layout_below="@id/single_ll"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player A "
+            android:background="#DCDCDC"
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:inputType="text"
+            android:id="@+id/player_A"/>
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player B"
+            android:inputType="text"
+            android:background="#DCDCDC"
+            android:textColor="#000000"
+            android:padding="5dp"
+            android:id="@+id/player_B"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#E1E1E1"
+            android:layout_gravity="center"
+            android:layout_marginVertical="10dp"
+            android:text="You may skip"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Start"
+            android:id="@+id/start_duo"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="Cancel"
+        android:layout_below="@id/duo_ll"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cancel"/>
+
+</RelativeLayout>
