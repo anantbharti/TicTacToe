@@ -10,8 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:screenOrientation="portrait" >
-        <activity android:name=".Scores"
-            android:label="Scoreboard"></activity>
+        <activity android:name=".Scores"></activity>
         <activity android:name=".DuoGame" />
         <activity android:name=".Game" />
         <activity android:name=".MainActivity">

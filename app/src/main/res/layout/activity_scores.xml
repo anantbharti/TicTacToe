@@ -15,8 +15,21 @@
         tools:ignore="MissingConstraints">
     </RelativeLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="Scoreboard"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:id="@+id/score_level"/>
+
     <ScrollView
         android:layout_width="match_parent"
+        android:layout_below="@id/score_level"
         android:layout_height="match_parent">
 
         <TextView
@@ -24,6 +37,7 @@
             android:layout_height="wrap_content"
             android:padding="20dp"
             android:textColor="#ffffff"
+            android:text="No matches played"
             android:textStyle="bold"
             android:textSize="16sp"
             android:id="@+id/score_text"/>

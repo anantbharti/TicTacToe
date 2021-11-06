@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String name=singleName.getText().toString();
                 if(name.isEmpty())
-                    name="Happy";
+                    name="Player";
                 final String[] levels={"Newbie","Pupil","Specialist","Expert"};
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Select level");
@@ -170,8 +170,17 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
             case R.id.reset_scores:{
-                myDb.deleteAllData();
-                Toast.makeText(MainActivity.this,"Scores deleted",Toast.LENGTH_SHORT).show();
+                new AlertDialog.Builder(this)
+                        .setMessage("Do you want to reset all the scores ?")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                myDb.deleteAllData();
+                                Toast.makeText(MainActivity.this,"Scores deleted",Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
                 break;
             }
         }

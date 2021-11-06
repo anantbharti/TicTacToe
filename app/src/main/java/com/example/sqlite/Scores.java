@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
 public class Scores extends AppCompatActivity {
 
     DatabaseHelper myDb;
-    TextView scoreText;
+    TextView scoreText,scoreLevel;
     String level;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,9 @@ public class Scores extends AppCompatActivity {
         setContentView(R.layout.activity_scores);
         myDb=new DatabaseHelper(this);
         scoreText=findViewById(R.id.score_text);
+        scoreLevel=findViewById(R.id.score_level);
         level=getIntent().getExtras().getString("Level");
+        scoreLevel.setText(level+" scoreboard");
         viewScores(1);
     }
 
